@@ -3,4 +3,11 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+    {% for task in tasks  %}
+        <div class="task">
+            <p class="content">
+                {{ task.content }}
+            </p>
+        </div>
+    {% endfor %}
 {% endblock content %}

@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Scripts folder made with the venv on windows
+Scripts/
