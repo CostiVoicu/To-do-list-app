@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo/favicon.svg' %}">
+</head>
+<body>
+    <div class="logo_title">
+        <img src="{% static 'images/logo/favicon.png' %}" alt="Logo">
+        <h1>To do list</h1>
+    </div>
+    {% block content %}{% endblock content %}
+</body>
+</html>
