@@ -13,7 +13,11 @@
 <body>
     <div class="logo_title">
         <img src="{% static 'images/logo/favicon.png' %}" alt="Logo">
-        <h1>To do list</h1>
+        <h1 class="title">To do list</h1>
+    </div>
+    <div class="user">
+        <p class="username">Username</p>
+        <a href="" class="button">Log out</a>
     </div>
     {% block content %}{% endblock content %}
 </body>
