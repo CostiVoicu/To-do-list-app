@@ -3,6 +3,10 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+    <div class="user">
+        <p class="username">Username</p>
+        <a href="" class="button">Log out</a>
+    </div>
     {% for task in tasks  %}
         <div class="task">
             <p class="content">
