@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 #Scripts folder made with the venv on windows
-Scripts/
+bin/
+pyvenv.cfg
