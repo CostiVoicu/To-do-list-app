@@ -1,10 +1,6 @@
-from multiprocessing import context
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login, logout
 from .forms import UserForm
-from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 
@@ -44,7 +40,9 @@ def login_view(request):
 
 def logout_view(request):
     context = {}
-    logout(request)
+    if request.method == 'POST':
+        logout(request)
+        return redirect('/')
     return render(request, 'accounts/logout.html', context=context)
 
 def register_view(request):
