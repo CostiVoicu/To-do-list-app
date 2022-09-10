@@ -5,7 +5,7 @@
 {% block content %}
     {% if request.user.is_authenticated is False %}
         <form method="POST">{% csrf_token %}
-            {{ form.as_p }}
+            {{ form.as_div }}
             <button type="submit">Log in</button>
         </form>
         <p>Need an account? <a href="/register">Register</a> NOW!</p>

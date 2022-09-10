@@ -4,7 +4,7 @@
 
 {% block content %}
     <form method="POST"> {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.as_div }}
         <button type="submit">Register</button>
         <p>Already have an account? <a href="/login">Login</a></p>
     </form>

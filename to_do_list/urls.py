@@ -23,9 +23,13 @@ from accounts.views import (
     logout_view,
     register_view
 )
+from tasks.views import (
+    create_task
+)
 
 urlpatterns = [
     path('', home_view),
+    path('create/', create_task),
     path('login/', login_view),
     path('logout/', logout_view),
     path('register/', register_view),

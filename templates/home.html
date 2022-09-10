@@ -8,15 +8,17 @@
             <p class="username">{{ user.username }}</p>
             <a href="/logout/" class="button">Log out</a>
         </div>
+        {% for task in tasks  %}
+            {% if request.user.username == task.creator %}
+                <div class="task">
+                    <p class="content">
+                        {{ task.content }}
+                    </p>
+                </div>
+            {% endif %}
+    {% endfor %}
     {% else %}
         <p>You are not logged in.</p>
         <a href="/login/">Log in NOW!</a>
     {% endif %}
-    {% for task in tasks  %}
-        <div class="task">
-            <p class="content">
-                {{ task.content }}
-            </p>
-        </div>
-    {% endfor %}
 {% endblock content %}
