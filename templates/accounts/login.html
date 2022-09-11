@@ -4,12 +4,15 @@
 
 {% block content %}
     {% if request.user.is_authenticated is False %}
+        <h2>You are not logged in!</h2>
         <form method="POST">{% csrf_token %}
             {{ form.as_div }}
+            <a href="/register">Register</a>
             <button type="submit">Log in</button>
         </form>
-        <p>Need an account? <a href="/register">Register</a> NOW!</p>
     {% else %}
-        <p>You are already logged in. Would you like to <a href="/logout/">log out</a>?</p>
+        <p>You are already logged in. Would you like to log out?</p>
+        <a href="/logout">Yes</a>
+        <a href="/">No</a>
     {% endif %}
 {% endblock content %}

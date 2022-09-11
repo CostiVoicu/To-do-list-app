@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from .views import (
     home_view,
+    delete_view,
 )
 from accounts.views import (
     login_view,
@@ -30,6 +31,7 @@ from tasks.views import (
 urlpatterns = [
     path('', home_view),
     path('create/', create_task),
+    path('delete/<int:id>', delete_view),
     path('login/', login_view),
     path('logout/', logout_view),
     path('register/', register_view),

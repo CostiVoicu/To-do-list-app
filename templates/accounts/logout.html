@@ -4,13 +4,13 @@
 
 {% block content %}
     {% if request.user.is_authenticated %}
-        <p>Hi, {{ user.username }}!</p>
         <form method="POST"> {% csrf_token %}
             <p>Are you sure you want to log out?</p>
             <button type="submit">Yes</button>
+            <a href="/">No</a>
         </form>
     {% else %}
         <p>You are not logged in.</p>
-        <a href="/login/">Login</a>
+        <a href="/login">Log in</a>
     {% endif %}
 {% endblock content %}

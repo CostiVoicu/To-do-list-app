@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Home{% endblock title %}
 
 {% block content %}
@@ -8,17 +8,23 @@
             <p class="username">{{ user.username }}</p>
             <a href="/logout/" class="button">Log out</a>
         </div>
+        <a href="/create">
+            <img height="20px" src="{% static 'images/plus-solid.svg' %}" alt="">
+        </a>
         {% for task in tasks  %}
             {% if request.user.username == task.creator %}
                 <div class="task">
                     <p class="content">
                         {{ task.content }}
                     </p>
+                    <a href="delete/{{task.id}}">
+                        <img height="20px" src="{% static 'images/trash-can-solid.svg' %}" alt="">
+                    </a>
                 </div>
             {% endif %}
     {% endfor %}
     {% else %}
-        <p>You are not logged in.</p>
-        <a href="/login/">Log in NOW!</a>
+        <p>You are not logged in!</p>
+        <a href="/login/">Log in</a>
     {% endif %}
 {% endblock content %}

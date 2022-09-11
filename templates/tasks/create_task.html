@@ -3,10 +3,14 @@
 {% block title %}Create task{% endblock title %}
 
 {% block content %}
-    <h1>Create a new task!</h1>
-    <form method="POST"> {% csrf_token %}
-        {{ form.as_div }}
-        <button type="submit">Create</button>
-    </form>
-    {{ name }}
+    {% if  request.user.is_authenticated %}
+        <h1>Create a new task!</h1>
+        <form method="POST"> {% csrf_token %}
+            {{ form.as_div }}
+            <button type="submit">Create</button>
+        </form>
+    {% else %}
+        <p>You are not logged in.</p>
+        <a href="/login">Log in</a>
+    {% endif %}
 {% endblock content %}
