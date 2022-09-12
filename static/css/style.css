@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #f4f1f1;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 400;
+  color: #262429;
+}
+
+.logo_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  float: left;
+  height: 10rem;
+}
+
+.logo_title img {
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.logo_title .title {
+  font-family: "Fredoka One", cursive;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  float: right;
+  height: 10rem;
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

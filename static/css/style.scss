@@ -1,0 +1,43 @@
+@import 'variables';
+
+html, body{
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: $white;
+    font-family: $font-text;
+    font-weight: 400;
+    color: $black;
+}
+
+//base
+.logo_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    float: left;
+    height: 10rem;
+    img{
+        width: 3rem;
+        height: auto;
+        margin-right: 1rem;
+    }
+    .title{
+        font-family: $font-logo;
+    }
+}
+
+//home logged in
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    float: right;
+    height: 10rem;
+    margin-right: 1rem;
+}
