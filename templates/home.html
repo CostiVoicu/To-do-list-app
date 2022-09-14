@@ -3,24 +3,28 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    {% if request.user.is_authenticated  %}
-        <a href="/create">
-            <img height="20px" src="{% static 'images/plus-solid.svg' %}" alt="">
-        </a>
-        {% for task in tasks  %}
-            {% if request.user.username == task.creator %}
-                <div class="task">
-                    <p class="content">
-                        {{ task.content }}
-                    </p>
-                    <a href="delete/{{task.id}}">
-                        <img height="20px" src="{% static 'images/trash-can-solid.svg' %}" alt="">
-                    </a>
-                </div>
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        <p>You are not logged in!</p>
-        <a href="/login/">Log in</a>
-    {% endif %}
+    <div class="content">
+        {% if request.user.is_authenticated  %}
+            <div class="create_button">
+                <a href="/create">
+                    <img height="20px" src="{% static 'images/plus-solid.svg' %}" alt="">
+                </a>
+            </div>
+            {% for task in tasks  %}
+                {% if request.user.username == task.creator %}
+                    <div class="task">
+                        <p class="text">
+                            {{ task.content }}
+                        </p>
+                        <a href="delete/{{task.id}}" class="delete_button">
+                            <img height="20px" src="{% static 'images/trash-can-solid.svg' %}" alt="">
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>You are not logged in!</p>
+            <a href="/login/">Log in</a>
+        {% endif %}
+    </div>
 {% endblock content %}
