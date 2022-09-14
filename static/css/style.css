@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 body {
@@ -9,6 +9,16 @@ body {
   font-family: "Signika Negative", sans-serif;
   font-weight: 400;
   color: #262429;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .logo_title {
@@ -22,9 +32,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
-  float: left;
   height: 10rem;
+  width: 50%;
 }
 
 .logo_title img {
@@ -49,7 +58,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
-  float: right;
   height: 10rem;
   margin-right: 1rem;
 }

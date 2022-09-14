@@ -3,7 +3,7 @@
 html, body{
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 body{
@@ -14,13 +14,17 @@ body{
 }
 
 //base
+header{
+    display: flex;
+    flex-direction: row;
+}
+
 .logo_title{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
-    float: left;
     height: 10rem;
+    width: 50%;
     img{
         width: 3rem;
         height: auto;
@@ -37,7 +41,6 @@ body{
     flex-direction: row;
     align-items: center;
     width: 50%;
-    float: right;
     height: 10rem;
     margin-right: 1rem;
 }

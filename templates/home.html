@@ -4,10 +4,6 @@
 
 {% block content %}
     {% if request.user.is_authenticated  %}
-        <div class="user">
-            <p class="username">{{ user.username }}</p>
-            <a href="/logout/" class="button">Log out</a>
-        </div>
         <a href="/create">
             <img height="20px" src="{% static 'images/plus-solid.svg' %}" alt="">
         </a>

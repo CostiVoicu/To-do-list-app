@@ -15,10 +15,18 @@
     <link rel="icon" type="image/x-icon" href="{% static 'images/logo/favicon.svg' %}">
 </head>
 <body>
-    <div class="logo_title">
-        <img src="{% static 'images/logo/favicon.png' %}" alt="Logo">
-        <h1 class="title">To do list</h1>
-    </div>
+    <header>
+        <div class="logo_title">
+            <img src="{% static 'images/logo/favicon.png' %}" alt="Logo">
+            <h1 class="title">To do list</h1>
+        </div>
+        {% if request.user.is_authenticated %}
+            <div class="user">
+                <p class="username">{{ user.username }}</p>
+                <a href="/logout/" class="button">Log out</a>
+            </div>
+        {% endif %}
+    </header>
     {% block content %}{% endblock content %}
 </body>
 </html>
