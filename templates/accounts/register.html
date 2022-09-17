@@ -3,15 +3,19 @@
 {% block title %}Register{% endblock title %}
 
 {% block content %}
-    {% if not request.user.is_authenticated %}
-        <form method="POST"> {% csrf_token %}
-            {{ form.as_div }}
-            <button type="submit">Register</button>
-        </form>
-    {% else %}
-        <p>You are already logged in.</p>
-        <p>Would you like to log out?</p>
-        <a href="/logout">Yes</a>
-        <a href="/">No</a>
-    {% endif %}
+    <div class="content">
+        {% if not request.user.is_authenticated %}
+            <form method="POST" class="register_form"> {% csrf_token %}
+                {{ form.as_div }}
+                <button class="orange_button" type="submit">Register</button>
+            </form>
+        {% else %}
+            <p class="title">You are already logged in.</p>
+            <p class="title">Would you like to log out?</p>
+            <div class="answers">
+                <a class="red_button" href="/logout">Yes</a>
+                <a class="orange_button" href="/">No</a>
+            </div>
+        {% endif %}
+    </div>
 {% endblock content %}

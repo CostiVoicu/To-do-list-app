@@ -1,6 +1,9 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm ,UserCreationForm
 
-class UserForm(AuthenticationForm):
-    username =  forms.CharField( max_length=50, widget=forms.TextInput(attrs={'class': 'myfieldclass', 'placeholder':'Username'}), label='')
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'myfieldclass', 'placeholder':'Password'}), label='')
+class user_form(AuthenticationForm):
+    username =  forms.CharField( max_length=50, widget=forms.TextInput(attrs={'class': 'field_class', 'placeholder':'Username'}), label='')
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'field_class', 'placeholder':'Password'}), label='')
+
+class register_form(UserCreationForm):
+    username =  forms.CharField( max_length=50, widget=forms.TextInput(attrs={'class': 'field_class'}))

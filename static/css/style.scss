@@ -13,6 +13,76 @@ body{
     color: $black;
 }
 
+//Similar elements
+
+//Titles
+.title{
+    font-weight: 600;
+    font-size: 2em;
+}
+
+//Orange button
+.orange_button, .orange_button:active, .orange_button:visited{
+    text-decoration: none;
+    background-color: $orange;
+    color: $white;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border: 1px $orange solid;
+    border-radius: 0.4rem;
+}
+.orange_button:hover{
+    background-color: hsl(28, 89%, 51%);
+    border: 1px hsl(28, 89%, 51%) solid
+}
+
+//Red button
+.red_button, .red_button:active, .red_button:visited{
+    text-decoration: none;
+    background-color: $red;
+    color: $white;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border: 1px $red solid;
+    border-radius: 0.4rem;
+}
+.red_button:hover{
+    background-color: hsl(4, 85%, 55%);
+    border: 1px hsl(4, 85%, 55%) solid;
+}
+
+
+//Fields
+.field_class, .field_class::placeholder{
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem 0 1rem;
+    color: $white;
+    background-color: $grey;
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    font-size: 0.9em;
+}
+
+.field_class::placeholder{
+    padding: 0;
+}
+
+//Change Autocomplete styles in Chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    -webkit-text-fill-color: $black;
+    box-shadow: 0 0 0px 1000px $grey inset;
+}
+
 //base
 header{
     display: flex;
@@ -20,6 +90,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 5rem 0 5rem;
+    height: 10rem;
 }
 
 .logo_title{
@@ -28,7 +99,7 @@ header{
     align-items: center;
     text-decoration: none;
     img{
-        width: 4rem;
+        width: 3rem;
         height: auto;
         margin-right: 1rem;
     }
@@ -42,22 +113,9 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10rem;
     margin-right: 1rem;
     .username{
         padding-right: 3rem;
-    }
-    .button, .button:active, .button:visited{
-        background-color: $red;
-        padding: 0.5rem 3rem 0.5rem 3rem;
-        border: 1px $red solid;
-        border-radius: 0.4rem;
-        color: $white;
-        text-decoration: none;
-    }
-    .button:hover{
-        background-color: hsl(4, 85%, 55%);
-        border: 1px hsl(4, 85%, 55%) solid;
     }
 }
 
@@ -90,4 +148,72 @@ header{
     border: 1px $grey solid;
     border-radius: 0.6rem;
     font-size: 1.3em;
+}
+
+//Login and Logout
+.form_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .register_button, .register_button:active, .register_button:visited{
+        color: $grey;
+        text-decoration: none;
+    }
+    .register_button:hover{
+        color: hsl(48, 3%, 38%);
+    }
+    .red_button{
+        font-size: 1.05em;
+    }
+}
+
+.answers{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//Passwords register
+#id_password1, #id_password2{
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem 0 1rem;
+    color: $black;
+    background-color: $grey;
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    font-size: 0.9em;
+}
+
+#id_password2{
+    margin-top: 1rem;
+}
+
+//Register form
+.register_form{
+    width: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#id_username{
+    margin-top: 1rem;
+}
+
+//Create task
+#id_content{
+    width: 20rem;
+    height: 3rem;
+    background-color: $grey;
+    //color: $black;
+    color: $white;
+    margin-bottom: 1rem;
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    font-size: 0.9em;
+    padding: 0 1rem 0 1rem;
 }
