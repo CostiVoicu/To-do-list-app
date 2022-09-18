@@ -6,7 +6,7 @@
     <div class="content">
         {% if request.user.is_authenticated is False %}
             <h2>You are not logged in!</h2>
-            <form method="POST">{% csrf_token %}
+            <form method="POST" class="form_login">{% csrf_token %}
                 {{ form.as_div }}
                 <div class="form_bottom">
                     <a class='register_button' href="/register">Register</a>
