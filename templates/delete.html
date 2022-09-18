@@ -3,9 +3,18 @@
 {% block title %}Delete task{% endblock title %}
 
 {% block content %}
-    <p>Are you sure you want to delete "{{ task.content }}"?</p>
-    <form method="POST">{% csrf_token %}
-        <button type="submit">Yes</button>
-        <a href="/">No</a>
-    </form>
+    <div class="content">
+        {% if request.user.is_authenticated %}
+            <p class="title">Are you sure you want to delete "{{ task.content }}"?</p>
+            <form method="POST">{% csrf_token %}
+                <div class="answers delete">
+                    <button class="red_button" type="submit">Yes</button>
+                    <a class="orange_button" href="/">No</a>
+                </div>
+            </form>
+        {% else %}
+            <p class="title">You are not logged in.</p>
+            <a class="orange_button" href="/login">Log in</a>
+        {% endif %}
+    </div>
 {% endblock content %}
