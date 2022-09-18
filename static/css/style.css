@@ -346,7 +346,12 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 19rem;
+}
+
+@media (max-width: 630px) {
+  .form_bottom {
+    width: 19rem;
+  }
 }
 
 .form_bottom .register_button, .form_bottom .register_button:active, .form_bottom .register_button:visited {

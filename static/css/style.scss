@@ -202,7 +202,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 19rem;
+    @media (max-width: $mobile-size){
+        width: 19rem;
+    }
     .register_button, .register_button:active, .register_button:visited{
         color: $grey;
         text-decoration: none;
