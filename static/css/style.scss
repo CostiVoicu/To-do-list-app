@@ -202,6 +202,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     @media (max-width: $mobile-size){
         width: 19rem;
     }
