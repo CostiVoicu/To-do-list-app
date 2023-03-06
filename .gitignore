@@ -131,6 +131,3 @@ dmypy.json
 #Scripts folder made with the venv on windows
 bin/
 pyvenv.cfg
-
-#Custom names
-README_images/
