@@ -1,4 +1,4 @@
-# To-do-list-app
+# To-Do-list-app
 
 ## Table of Content:
 
@@ -7,7 +7,7 @@
 - [Technologies](#technologies)
 
 ## About The App
-This is a to do list app where you can create an account and write your own tasks. You can create multiple accounts.
+This is a To-Do list app where you can create an account and write your own tasks. You can create multiple accounts.
 
 ## Screenshots
 ### Home page
